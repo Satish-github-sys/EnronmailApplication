@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Auth\**" />
+    <EmbeddedResource Remove="Auth\**" />
+    <None Remove="Auth\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Category.cs" />
+    <Compile Remove="Entities\Customer.cs" />
+    <Compile Remove="Entities\Order.cs" />
+    <Compile Remove="Entities\OrderDetail.cs" />
+    <Compile Remove="Entities\Product.cs" />
+    <Compile Remove="Entities\Supplier.cs" />
+    <Compile Remove="Enum\Roles.cs" />
+    <Compile Remove="Settings\MailRequest.cs" />
+    <Compile Remove="Settings\MailSettings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+  </ItemGroup>
+
+</Project>
